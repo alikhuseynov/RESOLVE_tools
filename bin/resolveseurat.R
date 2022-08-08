@@ -101,6 +101,16 @@ resolve.obj@images["seg"] <- CreateFOV(
   key = NULL,
   name = NULL)
 
+### TODO Create the (Spatial) Seurat Object ----
+#..as for Visium data, including image
+
+
+
+
+#### TODO try spatial analysis, eg FindSpatiallyVariableFeatures().. ----
+
+
+
 #### Quick test single cell analysis, not meaningful just to have something to plot
 resolve.obj <- subset(resolve.obj, subset = nCount_Spatial > 10) # Skip cells with no transcripts 
 resolve.obj <- SCTransform(resolve.obj, assay = "Spatial", verbose = FALSE)
