@@ -67,6 +67,9 @@ resolve.obj@meta.data <- as.data.table(resolve.obj@meta.data)
 resolve.obj@meta.data[, region := 1]
 resolve.obj@meta.data[, z := 0]
 resolve.obj@meta.data[, tile_num := 0]
+# TODO, check object class
+cell_coordinates %>% class
+
 resolve.obj@meta.data <- merge(resolve.obj@meta.data, cell_coordinates,
  by = "cell_id", sort = F)
 
